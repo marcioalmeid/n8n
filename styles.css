@@ -70,3 +70,250 @@ footer {
         padding: 0.5em;
     }
 }
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+    :root {
+      --primary: #1a73e8;
+      --primary-dark: #0d47a1;
+      --success: #34a853;
+      --danger: #ea4335;
+      --light-bg: #f8f9fa;
+      --border-radius: 8px;
+      --shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+      --transition: all 0.3s ease;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+      padding: 20px;
+    }
+
+    /* Container principal */
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 30px;
+      background-color: #ffffff;
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow);
+    }
+
+    /* Cabeçalho */
+    .header {
+      text-align: left;
+      margin-bottom: 30px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #eaeaea;
+    }
+
+    h1 {
+      font-size: 28px;
+      font-weight: 600;
+      color: #2c3e50;
+      margin-bottom: 15px;
+    }
+
+    h2 {
+      font-size: 20px;
+      font-weight: 500;
+      color: #2c3e50;
+      margin: 25px 0 15px;
+    }
+
+    h3 {
+      font-size: 16px;
+      font-weight: 500;
+      color: #2c3e50;
+      margin: 20px 0 10px;
+    }
+
+    /* Botão de Apply */
+    .apply-button {
+      display: inline-block;
+      background-color: var(--primary);
+      color: white;
+      padding: 10px 20px;
+      border-radius: var(--border-radius);
+      text-decoration: none;
+      font-weight: 500;
+      transition: var(--transition);
+      margin: 10px 0;
+    }
+
+    .apply-button:hover {
+      background-color: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Match Rate */
+    .match-rate {
+      background: linear-gradient(to right, #e6f7ff, #ffffff);
+      padding: 20px;
+      border-radius: var(--border-radius);
+      border-left: 5px solid var(--success);
+      margin: 20px 0;
+      display: flex;
+      align-items: center;
+    }
+
+    .match-rate h2 {
+      margin: 0;
+      color: #2c3e50;
+      font-size: 22px;
+    }
+
+    .match-percentage {
+      font-size: 28px;
+      color: var(--success);
+      font-weight: 700;
+      margin-left: auto;
+    }
+
+    /* Recomendações */
+    .recommendations {
+      background-color: #fff8e1;
+      padding: 20px;
+      border-radius: var(--border-radius);
+      border-left: 4px solid #ffab00;
+      margin-bottom: 25px;
+    }
+
+    .recommendations h3 {
+      color: #f57c00;
+      margin-top: 0;
+    }
+
+    .recommendations ul {
+      list-style-type: none;
+      padding-left: 5px;
+    }
+
+    .recommendations li {
+      position: relative;
+      padding-left: 25px;
+      margin-bottom: 12px;
+    }
+
+    .recommendations li:before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      color: #f57c00;
+      font-weight: bold;
+    }
+
+    /* Tabelas */
+    .skill-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      margin-bottom: 30px;
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .skill-table th {
+      background-color: var(--primary);
+      color: white;
+      font-weight: 500;
+      padding: 12px 16px;
+      text-align: left;
+      font-size: 14px;
+    }
+
+    .skill-table td {
+      padding: 14px 16px;
+      border-bottom: 1px solid #eaeaea;
+      font-size: 14px;
+    }
+
+    .skill-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .skill-table tr:nth-child(even) {
+      background-color: #f8f9fa;
+    }
+
+    .skill-table tr:hover {
+      background-color: #f1f8ff;
+    }
+
+    /* Status Icons */
+    .match {
+      color: var(--success);
+      font-weight: 500;
+    }
+
+    .missing {
+      color: var(--danger);
+      font-weight: 500;
+    }
+
+    /* Notas Finais */
+    .final-notes {
+      background-color: #f8f9fa;
+      padding: 20px;
+      border-radius: var(--border-radius);
+      margin-top: 20px;
+    }
+
+    .final-notes p {
+      margin-bottom: 15px;
+    }
+
+    .final-notes p:last-child {
+      margin-bottom: 0;
+    }
+
+    .final-notes strong {
+      color: #2c3e50;
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+      .container {
+        padding: 20px;
+      }
+      
+      .match-rate {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      
+      .match-percentage {
+        margin-left: 0;
+        margin-top: 10px;
+      }
+      
+      .skill-table {
+        display: block;
+        overflow-x: auto;
+      }
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: 10px;
+      }
+      
+      h1 {
+        font-size: 24px;
+      }
+      
+      .apply-button {
+        display: block;
+        text-align: center;
+      }
+    }
